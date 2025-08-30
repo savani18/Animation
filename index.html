@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Animation</title>
+    <style>
+
+        .color{
+            animation: body;
+            animation-duration: 7s;
+            animation-fill-mode: forwards;
+        }
+        .box{
+            margin: 20px;
+            padding: 10px;
+            height: 30px;
+            width: 190px;
+            border: 1px rgb(122, 124, 140);
+            border-radius: 20px;
+            animation: name 3s ease-in 1s forwards;
+        }
+
+
+        @keyframes name {
+            to{
+                transform:translate(600px,100px);
+            }
+            
+        }
+        .name{
+            margin-top :2px;
+            margin-left: 5px;
+            height: 30px;
+            width: 180px;
+            font-family: cursive;
+            /* margin: 10px;
+            padding: 10px; */
+        }
+        .box:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(222, 218, 218, 0.35);
+            border-color: rgba(148, 163, 184, 0.25);
+        }
+        .shape{
+            animation: circle 3s forwards,
+                        circle-2 2s 5s forwards;
+        }
+
+        .circle2{
+            margin-left:-103px;
+            animation: circle 3s forwards,
+                       circle-3 3s 5s forwards;
+        }
+
+
+        .triangle{
+            animation: triangle 3s forwards,
+                       triangle-2 2s 5s forwards;
+        }
+
+
+        .squre{
+            animation: squre 3s forwards,
+                       squre-2 2s 5s forwards;
+        }
+
+
+        @keyframes body {
+            from{
+                background: #53535e;
+            }
+            to{
+                background: #8d8d93;
+            }
+        }
+
+
+
+
+        @keyframes circle { 
+            from{
+                opacity:calc(0);
+                transform: translate(0px,0px);
+            }
+            to{
+                transform: translate(500px,90px);
+                opacity:calc(1);
+            }
+        }
+        @keyframes circle-2{
+            to{
+                transform: translate(670px,487px) scale(1);
+            }
+        }
+        @keyframes circle-3 {
+            to{
+                transform:translate(668px,200px);
+            }
+        }
+
+
+
+        @keyframes triangle {
+            from{
+                transform: translate(-190px,0px) rotate(0deg);
+                opacity: calc(0);
+            }
+            to{
+                transform: translate(565px,80px) rotate(360deg);
+                opacity: calc(1);
+            }
+        }
+        @keyframes triangle-2 {
+            to{
+                transform: translate(565px,250px) scale(1.9);
+            }
+            
+        }
+        
+
+        @keyframes squre {
+             from{
+                opacity:calc(0);
+                transform: translate(1500px,0px) rotate(0deg);
+            }
+            to{
+                transform: translate(620px,85px) rotate(360deg);
+                opacity:calc(1);
+            }
+        }
+        @keyframes squre-2 {
+            to{
+                transform: translate(463px,415px) scale(2);
+            }
+        }
+
+
+
+
+    </style>
+</head>
+
+<body class="color">
+    <div class="box">
+         <h2 class="name">Hitarth Savani</h2>
+    </div>
+
+        <span>
+            <img class="shape circle" src="1.png" alt="CIRCLE"width="100px">
+        </span>
+
+        <span>
+            <img class="shape circle2" src="1.png" alt="CIRCLE"width="100px">
+        </span>
+
+        <span>
+            <img class="triangle" src="2.png" alt="TRIANGLE"width="100px">
+        </span>
+
+        <span>
+            <img class="squre" src="3.png" alt="SQURE"width="100px">
+        </span>
+
+        
+</body>
+
+</html>
